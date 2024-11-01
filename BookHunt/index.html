@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!--Fonte Poppins-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+		<!--Favicon Link-->
+		 <link rel="icon" type="image/x-icon" href="./SRC/favicon.png">
+
+		<!--Font Awesome-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512 Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+		<!--CSS Link-->
+		<link rel="stylesheet" href="style.css">
+		<title>BookHunt</title>
+	</head>
+	
+	<body>
+		<header class="main_header">
+			<h1>BookHunt</h1>
+
+			<div class="input_area">
+				<input type="text" placeholder="Pesquisar Livros">
+				<i class="fa-solid fa-magnifying-glass"></i>
+			</div>
+
+			<div class="socials">
+				<a href="#">Pesquisar</a>
+				<a href="#">Meus Livros</a>	
+				<i class="fa-solid fa-book-open fa-2xl" id="icon_badge"></i>
+				<i class="fa-solid fa-bell fa-2xl" id="icon_badge"></i>
+				<i class="fa-solid fa-user" id="profile_icon"></i>
+			</div>
+		</header>
+		<main class="container">
+			<h1>Pesquisar Livros</h1>
+			<div>
+					<select name="gênero" id="gênero">
+						<option value="default" selected>Gênero</option>
+						<option value="logistica">Logística</option>
+						<option value="administracao">Administração</option>
+						<option value="eletrica">Elétrica</option>
+						<option value="suporteti">Suporte Técnico em T.I</option>
+					</select>
+
+					<select name="author" id="author">
+						<option value="default" selected>Autor</option>
+						<option value="2024">Oscar Niemeyer</option>
+						<option value="2023">2023</option>
+						<option value="2022">2022</option>
+						<option value="2021">2021</option>
+					</select>
+			</div>
+			<div class="books">
+				<div class="book">
+					<img src="https://picsum.photos/id/237/200/300" alt="O Pequeno Princípe">
+					<p>Ladrão de Carnes<br /><b>Paulo Cesar</b></p>
+				</div>
+				<div class="book">
+					<img src="https://picsum.photos/id/238/200/300" alt="O Pequeno Princípe">
+					<p>Ratatouille<br /><b>Auguste Gusteau</b></p>
+				</div>
+				<div class="book">
+					<img src="https://picsum.photos/id/239/200/300" alt="O Pequeno Princípe">
+					<p>Ratatouille<br /><b>Auguste Gusteau</b></p>
+				</div>
+				<div class="book">
+					<img src="https://picsum.photos/id/240/200/300" alt="O Pequeno Princípe">
+					<p>Ratatouille<br /><b>Auguste Gusteau</b></p>
+				</div>
+				<div class="book">
+					<img src="https://picsum.photos/id/241/200/300" alt="O Pequeno Princípe">
+					<p>Ratatouille<br /><b>Auguste Gusteau</b></p>
+				</div>
+			</div>
+			<div class="books">
+				<div class="book">
+					<img src="https://picsum.photos/id/250/200/300" alt="O Pequeno Princípe">
+					<p>Ladrão de Carnes<br /><b>Paulo Cesar</b></p>
+				</div>
+				<div class="book">
+					<img src="https://picsum.photos/id/251/200/300" alt="O Pequeno Princípe">
+					<p>Ratatouille<br /><b>Auguste Gusteau</b></p>
+				</div>
+				<div class="book">
+					<img src="https://picsum.photos/id/252/200/300" alt="O Pequeno Princípe">
+					<p>Ratatouille<br /><b>Auguste Gusteau</b></p>
+				</div>
+				<div class="book">
+					<img src="https://picsum.photos/id/253/200/300" alt="O Pequeno Princípe">
+					<p>Ratatouille<br /><b>Auguste Gusteau</b></p>
+				</div>
+				<div class="book">
+					<img src="https://picsum.photos/id/254/200/300" alt="O Pequeno Princípe">
+					<p>Ratatouille<br /><b>Auguste Gusteau</b></p>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>
