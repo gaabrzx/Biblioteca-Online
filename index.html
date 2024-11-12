@@ -1,116 +1,22 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/x-icon" href="./SRC/favicon.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512 Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="style.css">
-  <title>BookHunt</title>
-</head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<body>
-  <header class="main_header">
-    <h1>BookHunt</h1>
-    <div class="input_area">
-      <input type="text" id="pesquisa-livro" placeholder="Pesquisar Livros">
-      <i class="fa-solid fa-magnifying-glass"></i>
-    </div>
-    <div class="socials">
-      <a href="#">Pesquisar</a>
-      <a href="meuslivros.html">Meus Livros</a>  
-      <i class="fa-solid fa-book-open fa-2xl" id="icon_badge"></i>
-      <i class="fa-solid fa-bell fa-2xl" id="icon_badge"></i>
-      <i class="fa-solid fa-user" id="profile_icon"></i>
-    </div>
-  </header>
+    <!-- Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <main class="container">
-    <h1>Pesquisar Livros</h1>
-    <div>
-      <select name="gênero" id="gênero">
-        <option value="default" selected>Gênero</option>
-        <option value="logistica">Logística</option>
-        <option value="administracao">Administração</option>
-        <option value="eletrica">Elétrica</option>
-        <option value="suporteti">Suporte Técnico em T.I</option>
-      </select>
-
-      <select name="author" id="author">
-        <option value="default" selected>Autor</option>
-        <!-- As opções dos autores serão preenchidas automaticamente pelo JavaScript -->
-      </select>
-    </div>
-
-    <div class="books">
-      <!-- Os livros serão preenchidos aqui pelo JavaScript -->
-    </div>
-  </main>
-
-  <!-- Script JavaScript -->
-  <script>
-    const bancoDeLivros = [
-      { id: 1, titulo: "Educação Profissional Senai-rj", autor: "Camila Ceccatto", capa: "https://picsum.photos/id/237/200/300" },
-      { id: 2, titulo: "Administração de Redes Remotas", autor: "Alexandre Fernandes", capa: "https://picsum.photos/id/238/200/300" },
-      { id: 3, titulo: "Administração de Redes Locais", autor: "Lindeberg Barros", capa: "https://picsum.photos/id/239/200/300" },
-      { id: 4, titulo: "SQL Curso Prático", autor: "Celso Henrique", capa: "https://picsum.photos/id/240/200/300" },
-      { id: 5, titulo: "Cabeamento Estruturado", autor: "Paulo Sérgio", capa: "https://picsum.photos/id/241/200/300" },
-      { id: 6, titulo: "Informática Qualificação Profissional", autor: "Kariane de Oliveira", capa: "https://picsum.photos/id/240/200/300" },
-      { id: 7, titulo: "Algoritmos", autor: "José Augusto", capa: "https://picsum.photos/id/240/200/300" },
-      { id: 8, titulo: "Lógica de Programação", autor: "Camila Ceccatto", capa: "https://picsum.photos/id/237/200/300" },
-      { id: 9, titulo: "Programação Orientada a Objetos em JAVA", autor: "Isaias Camilo", capa: "https://picsum.photos/id/238/200/300" },
-      { id: 10, titulo: "Desenvolvimento para Web com Java", autor: "Everton Coimbra", capa: "https://picsum.photos/id/239/200/300" },
-      { id: 11, titulo: "Consertando Micros", autor: "Laércio Vasconcelos", capa: "https://picsum.photos/id/240/200/300" },
-      { id: 12, titulo: "Desenvolvimento para Web com Java", autor: "Everton Coimbra", capa: "https://picsum.photos/id/241/200/300" },
-      { id: 13, titulo: "O Guia dos Curiosos", autor: "Marcelo Duarte", capa: "https://picsum.photos/id/240/200/300" },
-      { id: 14, titulo: "Redes Sem Fio", autor: "Alexandre Fernandes", capa: "https://picsum.photos/id/240/200/300" }
-    ];
-
-    function preencherLivros(livros) {
-      const livrosContainer = document.querySelector('.books');
-      livrosContainer.innerHTML = '';
-      livros.forEach(livro => {
-        const livroElement = document.createElement('div');
-        livroElement.classList.add('book');
-        livroElement.innerHTML = `
-          <img src="${livro.capa}" alt="${livro.titulo}">
-          <p>${livro.titulo}<br /><b>${livro.autor}</b></p>
-        `;
-        livrosContainer.appendChild(livroElement);
-      });
-    }
-
-    function filtrarLivros() {
-      const termo = document.getElementById('pesquisa-livro').value.toLowerCase();
-      const autorSelecionado = document.getElementById('author').value;
-      const livrosFiltrados = bancoDeLivros.filter(livro => 
-        (livro.titulo.toLowerCase().includes(termo)) && 
-        (autorSelecionado === "default" || livro.autor === autorSelecionado)
-      );
-      preencherLivros(livrosFiltrados);
-    }
-
-    function preencherAutores() {
-      const selectAutor = document.getElementById('author');
-      const autoresUnicos = [...new Set(bancoDeLivros.map(livro => livro.autor))];
-      autoresUnicos.forEach(autor => {
-        const option = document.createElement('option');
-        option.value = autor;
-        option.textContent = autor;
-        selectAutor.appendChild(option);
-      });
-    }
-
-    document.getElementById('pesquisa-livro').addEventListener('input', filtrarLivros);
-    document.getElementById('author').addEventListener('change', filtrarLivros);
-
-    document.addEventListener('DOMContentLoaded', () => {
-      preencherAutores();
-      preencherLivros(bancoDeLivros);
-    });
-  </script>
-</body>
+    <title>BookHunt</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
