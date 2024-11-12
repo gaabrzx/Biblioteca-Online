@@ -14,7 +14,7 @@ const Content = ({ searchTerm }) => {
   return (
     <main id="content">
       <div className="select_area">
-        <select name="gênero" id="gênero">
+        {/* <select name="gênero" id="gênero">
           <option value="default" selected>
             Gênero
           </option>
@@ -22,7 +22,7 @@ const Content = ({ searchTerm }) => {
           <option value="administracao">Administração</option>
           <option value="eletrica">Elétrica</option>
           <option value="suporteti">Suporte Técnico em T.I</option>
-        </select>
+        </select> */}
 
         <select name="author" id="author" onChange={handleAuthorChange}>
           <option value="default" selected>
