@@ -1,7 +1,5 @@
 // header.jsx
 import "../SASS/header.sass";
-import { FaBell, FaBookOpen } from "react-icons/fa";
-import { GoPersonFill } from "react-icons/go";
 
 const Header = ({ onSearchChange }) => {
   return (
