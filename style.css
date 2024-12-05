@@ -1,0 +1,108 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0099cc;
+  padding: 20px;
+}
+
+#bookList {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.book {
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 10px;
+  width: 150px; /* Largura do container do livro */
+}
+
+.book img {
+  width: 150px; /* Largura fixa */
+  height: 230px; /* Altura fixa */
+  object-fit: cover; /* Mantém a proporção da imagem */
+  border-radius: 10px; /* Bordas arredondadas nas imagens */
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro mais opaco */
+  justify-content: center;
+  align-items: center;
+}
+
+.popupContent {
+  background-color: white; /* Fundo branco sólido */
+  border-radius: 15px;
+  padding: 20px;
+  width: 350px; /* Largura do pop-up */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais suave */
+}
+
+.close {
+  cursor: pointer;
+  float: right;
+  font-size: 24px; /* Tamanho maior para o botão de fechar */
+}
+
+h3 {
+  margin-top: 0; /* Remove margem superior do título */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse; /* Remove espaços entre as bordas das células */
+}
+
+th,
+td {
+  border: 1px solid #ccc; /* Borda das células */
+  padding: 10px; /* Espaçamento interno das células */
+}
+
+th {
+  background-color: #f2f2f2; /* Cor de fundo dos cabeçalhos da tabela */
+}
+
+#search {
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+}
+
+#authorSelect {
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+}
+
+#genreSelect {
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar {
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0099cc;
+  border-radius: 6px;
+}

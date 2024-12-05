@@ -1,24 +1,46 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookHunt</title>
 
-    <!-- Poppins -->
+    <link rel="shortcut icon" href="img/book.png" type="image/x-icon" />
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Poppins Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="public/senai.png" type="image/x-icon" />
-
-    <title>BookHunt</title>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <header>
+      <h1>BookHunt</h1>
+      <input
+        type="search"
+        id="search"
+        placeholder="Pesquisar livro ou autor..."
+      />
+      <select id="authorSelect">
+        <option value="">Selecionar Autor</option>
+        <!-- As opções de autores serão preenchidas pelo JavaScript -->
+      </select>
+      <select id="genreSelect">
+        <option value="">Selecionar Gênero</option>
+        <!-- As opções de gêneros serão preenchidas pelo JavaScript -->
+      </select>
+    </header>
+    <main id="bookList"></main>
+
+    <div id="popup" class="popup">
+      <p id="popupContent"></p>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
