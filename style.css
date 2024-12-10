@@ -60,6 +60,8 @@ header {
 
 h3 {
   margin-top: 0; /* Remove margem superior do título */
+  background-color: white;
+  padding: 10px;
 }
 
 table {
@@ -71,6 +73,8 @@ th,
 td {
   border: 1px solid #ccc; /* Borda das células */
   padding: 10px; /* Espaçamento interno das células */
+  background-color: white;
+  text-align: center;
 }
 
 th {
