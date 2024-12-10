@@ -1,8 +1,7 @@
-# React + Vite
+Biblioteca Virtual - TCC Senai
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto consiste em uma biblioteca virtual desenvolvida para o Trabalho de Conclusão de Curso (TCC) do Senai. A biblioteca permite que usuários pesquisem, acessem e gerenciem livros de forma prática e eficiente, promovendo a leitura e o acesso à informação.
 
-Currently, two official plugins are available:
+Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+HTML, CSS e Javascript
